@@ -21,6 +21,7 @@ function ContactList() {
   };
   return (
     <>
+      <h1>Contacts</h1>
       <div className="contacts-filter">
         <label htmlFor="filter-input">Find contacts by name</label>
         <input
