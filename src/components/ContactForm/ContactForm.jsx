@@ -11,16 +11,16 @@ function ContactForm() {
     event.preventDefault();
     const form = event.target;
     const name = event.target.elements.name.value;
-    const phone = event.target.elements.phone.value;
+    const number = event.target.elements.number.value;
     if (contacts.some(contact => contact.name === name)) {
       alert(`${name} is already present in the phonebook`);
       return;
-    } else if (!name || !phone) {
+    } else if (!name || !number) {
       alert('Please fill in all fields');
       return;
     }
 
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name: name, number: number }));
     form.reset();
   };
 
@@ -54,9 +54,9 @@ function ContactForm() {
         />
         <label htmlFor="number">Number</label>
         <input
-          id="phone"
+          id="number"
           type="tel"
-          name="phone"
+          name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
