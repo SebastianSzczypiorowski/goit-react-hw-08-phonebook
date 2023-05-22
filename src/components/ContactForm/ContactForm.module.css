@@ -1,0 +1,27 @@
+.contactContainer {
+  align-items: center;
+  width: 20%;
+  margin-top: 50px;
+}
+.contactContainer > form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  gap: 5px;
+}
+.contactForm > button {
+  border: none;
+  margin-top: 10px;
+  color: black;
+  background-color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contactForm > button:hover,
+.contactForm > button:focus {
+  color: red;
+}
+.contactForm > input {
+  height: 20px;
+}

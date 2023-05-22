@@ -7,7 +7,7 @@
   margin-right: 10px;
 }
 
-.Link :hover,
+.Link:hover,
 .Link:focus {
   color: red;
 }

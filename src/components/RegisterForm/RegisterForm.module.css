@@ -1,17 +1,12 @@
 .form {
-  border: 1px solid black;
-  height: 500px;
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 500px;
 }
-.form.label {
-  color: brown;
-  font-size: 20px;
-}
+
 .form button {
   width: 100px;
   height: 30px;
@@ -19,7 +14,7 @@
   background-color: rgb(241, 218, 189);
   border-radius: 10px;
 }
-.input {
+.form input {
   position: relative;
   height: 30px;
   width: 200px;

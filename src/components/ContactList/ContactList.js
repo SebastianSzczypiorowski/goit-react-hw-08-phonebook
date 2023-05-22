@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact } from 'components/redux/phonebook/operations';
 import { setFilters } from 'components/redux/phonebook/filtersSlice';
 import { getContacts, getFilter } from 'components/redux/phonebook/selectors';
+import css from './ContactList.module.css';
 
 function ContactList() {
   const contacts = useSelector(getContacts);
@@ -20,9 +21,8 @@ function ContactList() {
     dispatch(setFilters(e.target.value));
   };
   return (
-    <>
-      <h1>Contacts</h1>
-      <div className="contacts-filter">
+    <div className={css.contactList}>
+      <div className={css.filter}>
         <label htmlFor="filter-input">Find contacts by name</label>
         <input
           id="filter-input"
@@ -36,22 +36,24 @@ function ContactList() {
       <ul>
         {filteredContacts.map(contact => {
           return (
-            <li key={contact.id}>
+            <li key={contact.id} className={css.item}>
+              {/* <img src="../../Img/placeholder.jpg" alt="contact img" /> */}
               {contact.name} {contact.number}
               <button
+                className={css.listButton}
                 type="button"
                 name={contact.name}
                 onClick={() => {
                   handleDelete(contact.id);
                 }}
               >
-                Delete
+                X
               </button>
             </li>
           );
         })}
       </ul>
-    </>
+    </div>
   );
 }
 

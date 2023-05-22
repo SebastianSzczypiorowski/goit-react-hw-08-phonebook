@@ -5,6 +5,7 @@ import { getError, getIsLoading } from 'components/redux/phonebook/selectors';
 import { fetchContacts } from 'components/redux/phonebook/operations';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import ContactList from '../../components/ContactList/ContactList';
+import css from './Phonebook.module.css';
 
 function Phonebook() {
   const dispatch = useDispatch();
@@ -16,7 +17,7 @@ function Phonebook() {
   }, [dispatch]);
 
   return (
-    <div className="phonebook-container">
+    <div className={css.phonebookContainer}>
       <ContactForm />
 
       {isLoading && !error && <b>Request in progress...</b>}

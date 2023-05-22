@@ -1,7 +1,7 @@
-import '../../Pages/PhoneBook/Phonebook.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'components/redux/phonebook/operations';
 import { getContacts } from 'components/redux/phonebook/selectors';
+import css from './ContactForm.module.css';
 
 function ContactForm() {
   // const contacts = useSelector(state => state.contacts)
@@ -40,9 +40,8 @@ function ContactForm() {
   // };
 
   return (
-    <>
-      <h1>Phonebook</h1>
-      <form className="contact-form" onSubmit={handleSubmit}>
+    <div className={css.contactContainer}>
+      <form className={css.contactForm} onSubmit={handleSubmit}>
         <label htmlFor="name">Name</label>
         <input
           id="name"
@@ -63,7 +62,7 @@ function ContactForm() {
         />
         <button type="submit">Add contact</button>
       </form>
-    </>
+    </div>
   );
 }
 

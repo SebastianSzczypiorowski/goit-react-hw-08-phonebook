@@ -1,0 +1,10 @@
+.button {
+  border: none;
+  margin-bottom: 15px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: white;
+}
+.button:hover {
+  color: red;
+  cursor: pointer;
+}

@@ -6,6 +6,7 @@ import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { refreshUser } from 'components/redux/auth/operations';
 import { useAuth } from 'hooks/useAuth';
+import css from './AppBar/AppBar.module.css';
 
 const HomePage = lazy(() => import('../Pages/Home/HomePage'));
 const RegisterPage = lazy(() => import('../Pages/Register/Register'));
@@ -23,34 +24,36 @@ export const App = () => {
   return isRefreshing ? (
     <b>Refreshing user...</b>
   ) : (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<HomePage />} />
-        <Route
-          path="/register"
-          element={
-            <RestrictedRoute
-              redirectTo="/phonebook"
-              component={<RegisterPage />}
-            />
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <RestrictedRoute
-              redirectTo="/phonebook"
-              component={<LoginPage />}
-            />
-          }
-        />
-        <Route
-          path="/Phonebook"
-          element={
-            <PrivateRoute redirectTo="/login" component={<PhonebookPage />} />
-          }
-        />
-      </Route>
-    </Routes>
+    <div className={css.test}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route
+            path="/register"
+            element={
+              <RestrictedRoute
+                redirectTo="/phonebook"
+                component={<RegisterPage />}
+              />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <RestrictedRoute redirectTo="/Login" component={<LoginPage />} />
+            }
+          />
+          <Route
+            path="/Phonebook"
+            element={
+              <PrivateRoute
+                redirectTo="/Phonebook"
+                component={<PhonebookPage />}
+              />
+            }
+          />
+        </Route>
+      </Routes>
+    </div>
   );
 };
