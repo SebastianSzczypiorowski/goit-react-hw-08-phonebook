@@ -6,12 +6,11 @@ import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { refreshUser } from 'components/redux/auth/operations';
 import { useAuth } from 'hooks/useAuth';
-import Phonebook from 'Pages/PhoneBook/Phonebook';
 
 const HomePage = lazy(() => import('../Pages/Home/HomePage'));
 const RegisterPage = lazy(() => import('../Pages/Register/Register'));
 const LoginPage = lazy(() => import('../Pages/Login/Login'));
-const TasksPage = lazy(() => import('../Pages/PhoneBook/Phonebook'));
+const PhonebookPage = lazy(() => import('../Pages/PhoneBook/Phonebook'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -30,19 +29,25 @@ export const App = () => {
         <Route
           path="/register"
           element={
-            <RestrictedRoute redirectTo="/tasks" component={<RegisterPage />} />
+            <RestrictedRoute
+              redirectTo="/phonebook"
+              component={<RegisterPage />}
+            />
           }
         />
         <Route
           path="/login"
           element={
-            <RestrictedRoute redirectTo="/tasks" component={<LoginPage />} />
+            <RestrictedRoute
+              redirectTo="/phonebook"
+              component={<LoginPage />}
+            />
           }
         />
         <Route
           path="/Phonebook"
           element={
-            <PrivateRoute redirectTo="/login" component={<Phonebook />} />
+            <PrivateRoute redirectTo="/login" component={<PhonebookPage />} />
           }
         />
       </Route>

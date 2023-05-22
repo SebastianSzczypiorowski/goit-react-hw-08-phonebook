@@ -37,7 +37,7 @@ function ContactList() {
         {filteredContacts.map(contact => {
           return (
             <li key={contact.id}>
-              {contact.name} {contact.phone}
+              {contact.name} {contact.number}
               <button
                 type="button"
                 name={contact.name}
