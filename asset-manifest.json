@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/react-homework-template/static/css/main.63f820b1.css",
+    "main.js": "/react-homework-template/static/js/main.f5f3ebe1.js",
+    "static/js/659.50674de6.chunk.js": "/react-homework-template/static/js/659.50674de6.chunk.js",
+    "static/css/131.000c24f7.chunk.css": "/react-homework-template/static/css/131.000c24f7.chunk.css",
+    "static/js/131.0b147acd.chunk.js": "/react-homework-template/static/js/131.0b147acd.chunk.js",
+    "static/css/236.0f41ca0e.chunk.css": "/react-homework-template/static/css/236.0f41ca0e.chunk.css",
+    "static/js/236.ad1baf05.chunk.js": "/react-homework-template/static/js/236.ad1baf05.chunk.js",
+    "static/css/510.1669d7df.chunk.css": "/react-homework-template/static/css/510.1669d7df.chunk.css",
+    "static/js/510.b5d42ea7.chunk.js": "/react-homework-template/static/js/510.b5d42ea7.chunk.js",
+    "static/js/270.1eab1eaa.chunk.js": "/react-homework-template/static/js/270.1eab1eaa.chunk.js",
+    "index.html": "/react-homework-template/index.html",
+    "main.63f820b1.css.map": "/react-homework-template/static/css/main.63f820b1.css.map",
+    "main.f5f3ebe1.js.map": "/react-homework-template/static/js/main.f5f3ebe1.js.map",
+    "659.50674de6.chunk.js.map": "/react-homework-template/static/js/659.50674de6.chunk.js.map",
+    "131.000c24f7.chunk.css.map": "/react-homework-template/static/css/131.000c24f7.chunk.css.map",
+    "131.0b147acd.chunk.js.map": "/react-homework-template/static/js/131.0b147acd.chunk.js.map",
+    "236.0f41ca0e.chunk.css.map": "/react-homework-template/static/css/236.0f41ca0e.chunk.css.map",
+    "236.ad1baf05.chunk.js.map": "/react-homework-template/static/js/236.ad1baf05.chunk.js.map",
+    "510.1669d7df.chunk.css.map": "/react-homework-template/static/css/510.1669d7df.chunk.css.map",
+    "510.b5d42ea7.chunk.js.map": "/react-homework-template/static/js/510.b5d42ea7.chunk.js.map",
+    "270.1eab1eaa.chunk.js.map": "/react-homework-template/static/js/270.1eab1eaa.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63f820b1.css",
+    "static/js/main.f5f3ebe1.js"
+  ]
+}
